@@ -6,8 +6,14 @@ void main() {
   Scanner scanner = new Scanner(System.in);
   System.out.println("What is your age?");
   //TODO: add try-catch
-  int age = scanner.nextInt();
-  scanner.close();
+  int age = 0;
+  try{
+    age = scanner.nextInt();
+    scanner.close();
+  }catch (Exception e){
+
+  }
+
 
   if(age >= 0 && age < 18){
     System.out.println("You're a child.");
