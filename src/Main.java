@@ -9,11 +9,12 @@ void main() {
   int age = 0;
   try{
     age = scanner.nextInt();
-    scanner.close();
   }catch (Exception e){
-
+    System.out.println("Choose correct age. Exeption: " + e);
+    return;
   }
 
+  scanner.close();
 
   if(age >= 0 && age < 18){
     System.out.println("You're a child.");
