@@ -8,6 +8,10 @@ void main() {
         System.out.println(i + 1);
     }
     System.out.println();
+  Scanner scanner = new Scanner(System.in);
+  System.out.println("What is your age?");
+
+  int age = 0;
 
     Scanner scanner = new Scanner(System.in);
     System.out.println("What is your age?");
