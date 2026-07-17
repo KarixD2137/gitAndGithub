@@ -11,15 +11,20 @@ void main() {
 
     Scanner scanner = new Scanner(System.in);
     System.out.println("What is your age?");
-    //TODO: add try-catch
-    int age = scanner.nextInt();
-    scanner.close();
 
-    if (age >= 0 && age < 18) {
-        System.out.println("You're a child.");
-    } else if (age >= 18) {
-        System.out.println("You're an adult.");
-    } else {
-        System.out.println("What?");
+    int age;
+    try {
+        age = scanner.nextInt();
+        if (age >= 0 && age < 18) {
+            System.out.println("You're a child.");
+        } else if (age >= 18) {
+            System.out.println("You're an adult.");
+        } else {
+            System.out.println("What?");
+        }
+    } catch (InputMismatchException e) {
+        System.out.println("Please enter valid number");
+        scanner.nextLine(); // KLUCZOWE: czyszczenie błędnego wpisu z bufora
     }
+    scanner.close();
 }
