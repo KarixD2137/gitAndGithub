@@ -5,8 +5,9 @@ void main() {
 
   Scanner scanner = new Scanner(System.in);
   System.out.println("What is your age?");
-  //TODO: add try-catch
+
   int age = 0;
+
   try{
     age = scanner.nextInt();
   }catch (Exception e){
